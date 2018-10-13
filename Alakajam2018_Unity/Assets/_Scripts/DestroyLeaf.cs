@@ -4,12 +4,11 @@ using UnityEngine;
 
 public class DestroyLeaf : MonoBehaviour {
 
-
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Despawner"))
         {
-            gameObject.SetActive(false);
+            transform.parent.gameObject.SetActive(false);
         }
 
 
