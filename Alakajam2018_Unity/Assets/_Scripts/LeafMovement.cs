@@ -4,7 +4,9 @@ using UnityEngine;
 
 public class LeafMovement : MonoBehaviour {
 
-    public float fallingSpeed;
+   float fallingSpeed;
+
+    public Vector2 fallingSpeedMinMax; 
 
 	// Use this for initialization
 	void Start () {
@@ -17,4 +19,10 @@ public class LeafMovement : MonoBehaviour {
         transform.position += Vector3.down * fallingSpeed * Time.deltaTime;
 
 	}
+
+    private void OnEnable()
+    {
+        fallingSpeed = Random.Range(fallingSpeedMinMax.x,fallingSpeedMinMax.y);
+    }
+
 }

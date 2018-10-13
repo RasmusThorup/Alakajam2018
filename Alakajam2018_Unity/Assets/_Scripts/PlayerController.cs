@@ -11,7 +11,7 @@ public class PlayerController : MonoBehaviour {
     public Transform aim;
     bool currentlyAiming;
 
-    float jumpingForce;
+    public float jumpingForce;
     public float jumpingForceTimer = 1;
     public Vector2 jumpingForceMinMax;
 
@@ -55,6 +55,8 @@ public class PlayerController : MonoBehaviour {
         //Setting min Max on slider
         canonAimSlider.minValue = jumpingForceMinMax.x;
         canonAimSlider.maxValue = jumpingForceMinMax.y;
+
+        jumpingForce = jumpingForceMinMax.x;
 
     }
 
@@ -137,7 +139,7 @@ public class PlayerController : MonoBehaviour {
 
 
         //Reset variables
-        jumpingForce = 0;
+        jumpingForce = jumpingForceMinMax.x;
         gravityAmount = initGravityAmount;
         Time.timeScale = 1;
         canonAimSlider.value = jumpingForce;
