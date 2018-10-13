@@ -8,6 +8,13 @@ public class SineMovement : MonoBehaviour
 
     private float time;
 
+    private void Start()
+    {
+
+    }
+
+
+
     private void Update()
     {
         Vector3 last = (distance * offset) + distance * CalculateSine(time);
