@@ -25,7 +25,7 @@ GameObject:
   m_Layer: 0
   m_Name: LeafSpawner
   m_TagString: Untagged
-  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -36,7 +36,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1990010134068476}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 11.88, z: 0}
+  m_LocalPosition: {x: 0, y: 15, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -55,7 +55,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pooledObject: {fileID: 1616588552890358, guid: e87751d76b7954f649346b710879e043,
     type: 2}
-  pooledAmount: 6
+  pooledAmount: 8
   willGrow: 0
 --- !u!114 &114815733563020264
 MonoBehaviour:
@@ -84,5 +84,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spawnIntervalMin: 1
-  spawnIntervalMax: 5
+  spawnIntervalMax: 3
   spawnOffset: {x: 0, y: 0, z: 0}

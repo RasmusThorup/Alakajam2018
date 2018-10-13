@@ -9,9 +9,7 @@ public class DestroyLeaf : MonoBehaviour {
     {
         if (other.CompareTag("Despawner"))
         {
-            gameObject.SetActive(false);
+            transform.parent.gameObject.SetActive(false);
         }
-
-
     }
 }

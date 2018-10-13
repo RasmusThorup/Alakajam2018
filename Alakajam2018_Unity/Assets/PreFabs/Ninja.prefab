@@ -445,7 +445,7 @@ MonoBehaviour:
   jumpingForceMinMax: {x: 1, y: 10}
   gravityAmount: 9.81
   timeSlowdown: 0.152
-  numberOfDashes: 1
+  numberOfDashes: 10
   canAim: 0
   canonAimSlider: {fileID: 114407878703094062}
 --- !u!114 &114663120926104356
