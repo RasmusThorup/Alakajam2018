@@ -20,7 +20,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4739176479580166}
   - component: {fileID: 114820702504369524}
-  - component: {fileID: 114606447292730642}
+  - component: {fileID: 114183362716185542}
   m_Layer: 0
   m_Name: PlayerFollowCam
   m_TagString: Untagged
@@ -97,7 +97,7 @@ Transform:
   m_GameObject: {fileID: 1215539039093952}
   m_LocalRotation: {x: 1.8301497e-17, y: -0.000000013721428, z: 0.0000000013337893,
     w: -1}
-  m_LocalPosition: {x: 0, y: 2.2171926, z: -20}
+  m_LocalPosition: {x: 0, y: 3.0625129, z: -31.45}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4383044184864846}
@@ -127,9 +127,9 @@ Camera:
     height: 1
   near clip plane: 0.1
   far clip plane: 5000
-  field of view: 34.5
+  field of view: 37
   orthographic: 0
-  orthographic size: 5
+  orthographic size: 10
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -157,6 +157,23 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ListenerNumber: 0
+--- !u!114 &114183362716185542
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1215539039093952}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c4c1db4b85254cb0bcb3f45adb036b5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lockXPos: 1
+  lockYPos: 0
+  lockZPos: 0
+  m_XLockedPosition: 0
+  m_YLockedPosition: 0
+  m_ZLockedPosition: 0
 --- !u!114 &114438875056103692
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -223,7 +240,7 @@ MonoBehaviour:
   m_ZDamping: 1
   m_ScreenX: 0.5
   m_ScreenY: 0.598
-  m_CameraDistance: 20
+  m_CameraDistance: 31.45
   m_DeadZoneWidth: 1
   m_DeadZoneHeight: 0.56
   m_DeadZoneDepth: 0
@@ -243,23 +260,6 @@ MonoBehaviour:
   m_MaximumFOV: 60
   m_MinimumOrthoSize: 1
   m_MaximumOrthoSize: 100
---- !u!114 &114606447292730642
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1215539039093952}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 0}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  lockXPos: 1
-  lockYPos: 0
-  lockZPos: 0
-  m_XLockedPosition: 0
-  m_YLockedPosition: 0
-  m_ZLockedPosition: 0
 --- !u!114 &114820702504369524
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -280,7 +280,7 @@ MonoBehaviour:
   m_LookAt: {fileID: 0}
   m_Follow: {fileID: 0}
   m_Lens:
-    FieldOfView: 34.5
+    FieldOfView: 37
     OrthographicSize: 10
     NearClipPlane: 0.1
     FarClipPlane: 5000

@@ -7,7 +7,7 @@ public class SpawnerMovement : MonoBehaviour {
     public Transform player;
     public Vector3 distance = new Vector3(0, 2, 0);
    
-    public float offset = 20f;
+    public float heightOffsetFromPlayer = 20f;
 
     public float speed = 1;
     private float time;
@@ -22,7 +22,7 @@ public class SpawnerMovement : MonoBehaviour {
 
        
 
-        Vector3 last = (distance * offset) + distance * CalculateSine(time);
+        Vector3 last = (distance) + distance * CalculateSine(time);
 
         time += Time.deltaTime / distance.magnitude * speed;
 
@@ -31,11 +31,11 @@ public class SpawnerMovement : MonoBehaviour {
             time = time - 1;
         }
 
-        Vector3 now = (distance * offset) + distance * CalculateSine(time);
+        Vector3 now = (distance) + distance * CalculateSine(time);
 
         Vector3 XandZ = transform.position += now - last;
 
-        transform.position = new Vector3(XandZ.x, player.transform.position.y + offset, XandZ.z);
+        transform.position = new Vector3(XandZ.x, player.transform.position.y + heightOffsetFromPlayer, XandZ.z);
 
     }
 
@@ -48,7 +48,7 @@ public class SpawnerMovement : MonoBehaviour {
     {
         Gizmos.color = Color.green;
 
-        Vector3 start = (distance * offset) + transform.position - distance * CalculateSine(time);
+        Vector3 start = (distance * heightOffsetFromPlayer) + transform.position - distance * CalculateSine(time);
 
         Gizmos.DrawLine(start, start + distance);
         Gizmos.DrawSphere(start, 0.2f);
