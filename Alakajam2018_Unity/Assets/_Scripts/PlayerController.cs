@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerController : MonoBehaviour {
 
@@ -25,16 +26,22 @@ public class PlayerController : MonoBehaviour {
 
     public bool canAim = true;
 
+    public Slider canonAimSlider;
 
-    bool doOnce;
+    bool JumpButtonReleased;
 
-	void Start () {
+    bool doOnceDashes;
+
+    Vector2 playerAim;
+
+    void Start () {
+
         input = GetComponent<InputManager>();
         playerRigidbody = GetComponent<Rigidbody>();
 
         //Setting some things
         canAim = true;
-        doOnce = true;
+        doOnceDashes = true;
 
         if (numberOfDashes!=0)
         {
@@ -42,39 +49,49 @@ public class PlayerController : MonoBehaviour {
             initNumberOfDashes = numberOfDashes;
         }
 
+        //Saving Init Gravity
         initGravityAmount = gravityAmount;
 
+        //Setting min Max on slider
+        canonAimSlider.minValue = jumpingForceMinMax.x;
+        canonAimSlider.maxValue = jumpingForceMinMax.y;
+
     }
-	
-	void Update () {
-		
-	}
 
     private void FixedUpdate()
     {
-
-        if (canAim && input.isJumping)
+        if (canAim && input.isJumping && jumpingForce<jumpingForceMinMax.y && JumpButtonReleased)
         {
+            //player aim
             PlayerAiming();
         }
         else if (currentlyAiming)
         {
-            PlayerKanon();
+            //player jump force added
+            PlayerCanon();
         }
-        else
+        else if (input.isJumping)
         {
-            //Player is in the air sorta..
+            //player still holding jump down after jumping
+
+        }else
+        {
+            //Player let go
+            JumpButtonReleased = true;
+
         }
 
-        //Handle Dashes
+
+
+        //Handle in air Dashes
         if (numberOfDashes > 0 && input.isJumping)
         {
             canAim = true;
 
-            if (doOnce)
+            if (doOnceDashes)
             {
                 numberOfDashes -= 1;
-                doOnce = false;
+                doOnceDashes = false;
             }
         }
 
@@ -88,27 +105,45 @@ public class PlayerController : MonoBehaviour {
         //Setting the aim art
         aim.eulerAngles = new Vector3(0, 0, -(Mathf.Atan2(input.playerAim.x, input.playerAim.y) * 180 / Mathf.PI));
 
+        //Building Jump Force
         jumpingForce += jumpingForceTimer;
 
+        //Setting UI canon aim slider
+        canonAimSlider.value = jumpingForce;
+
+        //Setting bullet time
         Time.timeScale = timeSlowdown;
         Time.fixedDeltaTime = .02f * Time.timeScale;
     }
 
-    void PlayerKanon(){
-        // Player released button and is jumping
+    void PlayerCanon(){
+        // Player is jumping
+        JumpButtonReleased = false;
+
+        //Stopping all other forces
         playerRigidbody.velocity = Vector3.zero;
-        playerRigidbody.AddForce(input.playerAim * Mathf.Clamp(jumpingForce, jumpingForceMinMax.x, jumpingForceMinMax.y), ForceMode.VelocityChange);
-        jumpingForce = 0;
+
+        //sætter det så spilleren ikke bare står stille hvis spilleren ikke sigter
+        if (input.playerAim == Vector2.zero)
+        {
+            playerAim = Vector2.up;
+        }else
+        {
+            playerAim = input.playerAim;
+        }
+
+        playerRigidbody.AddForce(playerAim * Mathf.Clamp(jumpingForce, jumpingForceMinMax.x, jumpingForceMinMax.y), ForceMode.VelocityChange);
 
 
 
         //Reset variables
+        jumpingForce = 0;
         gravityAmount = initGravityAmount;
         Time.timeScale = 1;
-
+        canonAimSlider.value = jumpingForce;
         currentlyAiming = false;
         canAim = false;
-        doOnce = true;
+        doOnceDashes = true;
     }
 
 
