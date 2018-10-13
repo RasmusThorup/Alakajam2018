@@ -13,14 +13,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   EditorBanks:
   - {fileID: 114792710698336882}
-  - {fileID: 114957815713351030}
+  - {fileID: 114104645722898866}
   EditorEvents:
   - {fileID: 114550390122144618}
   - {fileID: 114030323445638616}
   - {fileID: 114847768139676466}
-  MasterBankRef: {fileID: 114957815713351030}
+  MasterBankRef: {fileID: 114104645722898866}
   StringsBankRef: {fileID: 114792710698336882}
-  stringsBankWriteTime: 636750521440000000
+  stringsBankWriteTime: 636750521580000000
   cacheVersion: 2
 --- !u!114 &114030323445638616
 MonoBehaviour:
@@ -36,16 +36,50 @@ MonoBehaviour:
   Path: event:/Charging
   guid: 456fec416de496439e7f71d7bdb7bb06
   Banks:
-  - {fileID: 114957815713351030}
+  - {fileID: 114104645722898866}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
   Parameters:
-  - {fileID: 114915572509022310}
+  - {fileID: 114858495874081828}
   MinDistance: 0
   MaxDistance: 0
   Length: 8006
+--- !u!114 &114104645722898866
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: /Users/madsr/Documents/GitHub/Alakajam2018/Alakajam2018_Unity/FMOD Banks/Desktop/Master
+    Bank.bank
+  lastModified: 636750521580000000
+  LoadResult: 0
+  FileSizes:
+  - Name: 
+    Value: 5047968
+  Exists: 1
 --- !u!114 &114331047355105646
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: Wind
+  Min: 0
+  Max: 1
+  Default: 0
+--- !u!114 &114384809976005628
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -89,7 +123,7 @@ MonoBehaviour:
   Path: event:/Jumping
   guid: 006d776a5ae99a488c2a8efd58e624f2
   Banks:
-  - {fileID: 114957815713351030}
+  - {fileID: 114104645722898866}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -109,7 +143,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Path: FMOD Banks/Desktop/Master Bank.strings.bank
-  lastModified: 636750521440000000
+  lastModified: 636750521580000000
   LoadResult: 0
   FileSizes:
   - Name: 
@@ -129,15 +163,30 @@ MonoBehaviour:
   Path: event:/Atmos
   guid: 88929844f6fdcd42adce550f7120efaf
   Banks:
-  - {fileID: 114957815713351030}
+  - {fileID: 114104645722898866}
   IsStream: 1
   Is3D: 0
   IsOneShot: 0
   Parameters:
-  - {fileID: 114476169660697976}
+  - {fileID: 114384809976005628}
   MinDistance: 0
   MaxDistance: 0
   Length: 32000
+--- !u!114 &114858495874081828
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: ChargeUp
+  Min: 0
+  Max: 1
+  Default: 0
 --- !u!114 &114883437813628236
 MonoBehaviour:
   m_ObjectHideFlags: 0

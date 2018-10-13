@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour {
 
@@ -10,6 +11,15 @@ public class GameManager : MonoBehaviour {
     public int playerLives;
 
     public float score;
+
+    public int highScore;
+
+    public GameObject player;
+
+    private GameOverUI gameOverUI;
+
+
+
 
 
     bool isGameOver;
@@ -27,16 +37,27 @@ public class GameManager : MonoBehaviour {
             Destroy(gameObject);
     }
 
-    void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+    void Start()
+    {
+        gameOverUI = GetComponent<GameOverUI>();
 
-    public bool IsActiveGame(){
+        LockMouse();
+    }
+
+
+    public bool IsActiveGame()
+    {
         return gameHasStarted && !isGameOver;
+    }
+
+    public void GameOver()
+    {
+        gameOverUI.gameObject.SetActive(true);
+    }
+
+    void LockMouse()
+    {
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
     }
 }
