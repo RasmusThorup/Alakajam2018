@@ -7,7 +7,6 @@ public class StickyLeaf : MonoBehaviour {
 
     PlayerController playerController;
     Rigidbody playerRigid;
-    public Collider leafCollider;
 
     private void Start()
     {
@@ -31,9 +30,6 @@ public class StickyLeaf : MonoBehaviour {
             playerRigid.velocity = Vector3.zero;
             playerController.gravityAmount = 0;
             playerRigid.useGravity = false;
-
-            //disable Collider
-            leafCollider.enabled = false;
         }
     }
 
@@ -42,7 +38,6 @@ public class StickyLeaf : MonoBehaviour {
         if (other.CompareTag("Player"))
         {
             other.transform.SetParent(transform);
-
         }
     }
 
@@ -51,8 +46,6 @@ public class StickyLeaf : MonoBehaviour {
         if (other.CompareTag("Player"))
         {
             other.transform.parent = null;
-            //enable Collider
-            leafCollider.enabled = true;
         }
     }
 }
