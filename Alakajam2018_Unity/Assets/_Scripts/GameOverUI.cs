@@ -5,17 +5,16 @@ using TMPro;
 
 public class GameOverUI : MonoBehaviour {
 
-    private SceneFader sceneFader;
+    public SceneFader sceneFader;
     public TMP_Text gameOverPoints;
-    private Score score;
+    public Score score;
     public string menu = "Menu";
     public string retry = "Game";
 
 
     private void Start()
     {
-        score = GetComponent<Score>();
-        sceneFader = GetComponent<SceneFader>();
+        //sceneFader = GetComponent<SceneFader>();
     }
     void Update () 
     {

@@ -8,15 +8,18 @@ public class MenuManager : MonoBehaviour {
 
     private SceneFader sceneFader;
     public string scene = "Game";
-    private GameManager gameManager;
     public TMP_Text highestscore;
 
     void Start () 
     {
         sceneFader = GetComponent<SceneFader>();
-        gameManager = GetComponent<GameManager>();
 	}
-	
+
+    private void Update()
+    {
+        SetHighScore();
+    }
+
     public void PlayGame()
     {
         sceneFader.FadeTo(scene);
@@ -30,7 +33,7 @@ public class MenuManager : MonoBehaviour {
 
     void SetHighScore()
     {
-        highestscore.text = gameManager.highScore.ToString();
+        highestscore.text = GameManager.highScore.ToString();
     }
 
     
