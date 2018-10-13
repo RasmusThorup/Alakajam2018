@@ -7,8 +7,12 @@ public class InputManager : MonoBehaviour {
     public Vector2 playerAim;
     public float deadzone = .25f;
     public bool isJumping;
+    bool jumpButtonUp;
 
-	void Update () {
+    public bool jumpReleased;
+
+    void Update()
+    {
 
         playerAim = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
         if (playerAim.magnitude < deadzone)
@@ -17,6 +21,14 @@ public class InputManager : MonoBehaviour {
         isJumping = Input.GetButton("Jump");
 
 
-
+        //Button is down
+        if (isJumping)
+        {
+            jumpReleased = false;
+        }
+        else
+        {
+            jumpReleased = true;
+        }
     }
 }
