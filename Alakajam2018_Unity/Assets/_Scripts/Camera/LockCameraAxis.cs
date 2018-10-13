@@ -5,7 +5,7 @@ using Cinemachine;
 /// An add-on module for Cinemachine Virtual Camera that locks the camera's Z co-ordinate
 /// </summary>
 [ExecuteInEditMode] [SaveDuringPlay] [AddComponentMenu("")] // Hide in menu
-public class LockCameraZ : CinemachineExtension
+public class LockCameraAxis : CinemachineExtension
 {
     [Tooltip("Lock the camera's Z position to this value")]
     public bool lockXPos;
