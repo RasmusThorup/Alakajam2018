@@ -19,10 +19,25 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4606892106334952}
-  - component: {fileID: 33317643598225256}
-  - component: {fileID: 23948121375783864}
   m_Layer: 0
   m_Name: Mesh
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &1611069394769106
+GameObject:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4741496403680196}
+  - component: {fileID: 33758301918470288}
+  - component: {fileID: 23792178984154468}
+  m_Layer: 0
+  m_Name: SakuraLeaffbx
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -52,11 +67,11 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4065901708047670}
-  - component: {fileID: 136989794245202480}
-  - component: {fileID: 136468017042542086}
   - component: {fileID: 54252536267463278}
   - component: {fileID: 114752206735537430}
   - component: {fileID: 114731437496681390}
+  - component: {fileID: 64028519897480980}
+  - component: {fileID: 64846182602538680}
   m_Layer: 0
   m_Name: Collider
   m_TagString: Untagged
@@ -70,13 +85,13 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1820397745543034}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0.17364825, y: 0, z: 0, w: 0.9848078}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4312454289083654}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -20, y: 0, z: 0}
 --- !u!4 &4312454289083654
 Transform:
   m_ObjectHideFlags: 1
@@ -85,7 +100,7 @@ Transform:
   m_GameObject: {fileID: 1616588552890358}
   m_LocalRotation: {x: 0.17149085, y: -0, z: -0, w: 0.98518574}
   m_LocalPosition: {x: 0, y: 5, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.5, y: 1.5, z: 1.5}
   m_Children:
   - {fileID: 4065901708047670}
   - {fileID: 4606892106334952}
@@ -100,17 +115,31 @@ Transform:
   m_GameObject: {fileID: 1466617047736928}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 2.5, y: 1.2, z: 0.2}
-  m_Children: []
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 4741496403680196}
   m_Father: {fileID: 4312454289083654}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!23 &23948121375783864
+--- !u!4 &4741496403680196
+Transform:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1611069394769106}
+  m_LocalRotation: {x: -0.17364825, y: 0, z: 0, w: 0.9848078}
+  m_LocalPosition: {x: -0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4606892106334952}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: -20, y: 0, z: 0}
+--- !u!23 &23792178984154468
 MeshRenderer:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1466617047736928}
+  m_GameObject: {fileID: 1611069394769106}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -120,7 +149,7 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RenderingLayerMask: 4294967295
   m_Materials:
-  - {fileID: 2100000, guid: 7cb32087676584292a1a5f41c3ef780c, type: 2}
+  - {fileID: 2100000, guid: 06c3049c090e44d37868d84ab65e1bef, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -140,13 +169,13 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!33 &33317643598225256
+--- !u!33 &33758301918470288
 MeshFilter:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1466617047736928}
-  m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+  m_GameObject: {fileID: 1611069394769106}
+  m_Mesh: {fileID: 4300000, guid: 03ddc6c919cb44988b1c2157936a39a0, type: 3}
 --- !u!54 &54252536267463278
 Rigidbody:
   m_ObjectHideFlags: 1
@@ -162,6 +191,34 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!64 &64028519897480980
+MeshCollider:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1820397745543034}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 1
+  m_CookingOptions: 14
+  m_SkinWidth: 0.01
+  m_Mesh: {fileID: 4300000, guid: 988014ec84135493c8604129937e83f5, type: 3}
+--- !u!64 &64846182602538680
+MeshCollider:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1820397745543034}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 1
+  m_CookingOptions: -1
+  m_SkinWidth: 0.01
+  m_Mesh: {fileID: 4300000, guid: 988014ec84135493c8604129937e83f5, type: 3}
 --- !u!114 &114590047633337134
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -196,30 +253,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bc669e4f8cbad40d0b2e6693baee26de, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  leafCollider: {fileID: 136468017042542086}
---- !u!136 &136468017042542086
-CapsuleCollider:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1820397745543034}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 0.4
-  m_Height: 1.9
-  m_Direction: 0
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!136 &136989794245202480
-CapsuleCollider:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1820397745543034}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  m_Radius: 0.5
-  m_Height: 2
-  m_Direction: 0
-  m_Center: {x: 0, y: 0, z: 0}
+  leafCollider: {fileID: 64028519897480980}
