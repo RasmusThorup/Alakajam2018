@@ -24,6 +24,9 @@ public class PlayerController : MonoBehaviour {
     public int numberOfDashes;
     int initNumberOfDashes;
 
+    public float airControlSpeed;
+
+    [HideInInspector]
     public bool canAim = true;
 
     public Slider canonAimSlider;
@@ -56,6 +59,8 @@ public class PlayerController : MonoBehaviour {
         canonAimSlider.minValue = jumpingForceMinMax.x;
         canonAimSlider.maxValue = jumpingForceMinMax.y;
 
+        jumpingForce = jumpingForceMinMax.x;
+
     }
 
     private void FixedUpdate()
@@ -73,15 +78,16 @@ public class PlayerController : MonoBehaviour {
         else if (input.isJumping)
         {
             //player still holding jump down after jumping
-
         }else
         {
             //Player let go
             JumpButtonReleased = true;
-
         }
 
-
+        if (!canAim)
+        {
+            AirControl();
+        }
 
         //Handle in air Dashes
         if (numberOfDashes > 0 && input.isJumping)
@@ -137,7 +143,7 @@ public class PlayerController : MonoBehaviour {
 
 
         //Reset variables
-        jumpingForce = 0;
+        jumpingForce = jumpingForceMinMax.x;
         gravityAmount = initGravityAmount;
         Time.timeScale = 1;
         canonAimSlider.value = jumpingForce;
@@ -146,6 +152,12 @@ public class PlayerController : MonoBehaviour {
         doOnceDashes = true;
     }
 
+    void AirControl(){
+
+        playerRigidbody.AddForce(new Vector3(input.playerAim.x, 0, 0) * airControlSpeed, ForceMode.Acceleration);
+
+
+    }
 
     public void PlayerGravity(){
         playerRigidbody.AddForce(Vector3.down * gravityAmount, ForceMode.Acceleration);
