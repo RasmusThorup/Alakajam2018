@@ -10,7 +10,7 @@ public class InputManager : MonoBehaviour {
 
 	void Update () {
 
-        playerAim = new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"));
+        playerAim = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
         if (playerAim.magnitude < deadzone)
             playerAim = Vector2.zero;
 

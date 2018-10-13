@@ -63,10 +63,7 @@ public class PlayerController : MonoBehaviour {
         }
         else
         {
-            //Player is in the air
-
-
-
+            //Player is in the air sorta..
         }
 
         //Handle Dashes
@@ -89,9 +86,12 @@ public class PlayerController : MonoBehaviour {
     void PlayerAiming(){
         currentlyAiming = true;
         //Setting the aim art
-        aim.eulerAngles = new Vector3(0, 0, (Mathf.Atan2(Input.GetAxis("Vertical"), Input.GetAxis("Horizontal")) * 180 / Mathf.PI) - 90);
+        aim.eulerAngles = new Vector3(0, 0, -(Mathf.Atan2(input.playerAim.x, input.playerAim.y) * 180 / Mathf.PI));
 
         jumpingForce += jumpingForceTimer;
+
+        Time.timeScale = timeSlowdown;
+        Time.fixedDeltaTime = .02f * Time.timeScale;
     }
 
     void PlayerKanon(){
@@ -101,9 +101,11 @@ public class PlayerController : MonoBehaviour {
         jumpingForce = 0;
 
 
-        gravityAmount = initGravityAmount;
 
         //Reset variables
+        gravityAmount = initGravityAmount;
+        Time.timeScale = 1;
+
         currentlyAiming = false;
         canAim = false;
         doOnce = true;
