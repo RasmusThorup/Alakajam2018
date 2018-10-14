@@ -36,6 +36,5 @@ public class Score : MonoBehaviour {
         }
 
         points.text = currentScore.ToString();
-        Debug.Log(GameManager.highScore);
     }
 }
