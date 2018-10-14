@@ -24,6 +24,10 @@ public class StickyLeaf : MonoBehaviour {
 
     private void OnCollisionEnter(Collision collision)
     {
+        if (GameManager.instance.gameOver)
+        {
+            return;
+        }
         if (collision.collider.CompareTag("Player"))
         {
             //Start Player ability to aim
@@ -55,6 +59,10 @@ public class StickyLeaf : MonoBehaviour {
 
     private void OnTriggerEnter(Collider other)
     {
+        if (GameManager.instance.gameOver)
+        {
+            return;
+        }
         if (other.CompareTag("Player"))
         {
             if (GameManager.currentLeafHashCode != 0)
@@ -71,6 +79,10 @@ public class StickyLeaf : MonoBehaviour {
 
     private void OnTriggerExit(Collider other)
     {
+        if (GameManager.instance.gameOver)
+        {
+            return;
+        }
         if (other.CompareTag("Player"))
         {
 

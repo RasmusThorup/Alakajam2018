@@ -59,7 +59,7 @@ public class PlayerController : MonoBehaviour {
         playerRigidbody = GetComponent<Rigidbody>();
 
         //Setting some things
-        canAim = true;
+        //canAim = true;
         doOnceDashes = true;
 
         if (numberOfDashes!=0)
@@ -83,6 +83,10 @@ public class PlayerController : MonoBehaviour {
 
     private void FixedUpdate()
     {
+        if (GameManager.instance.gameOver)
+            return;
+        
+
         if (canAim && input.isJumping && jumpingForce<jumpingForceMinMax.y && JumpButtonReleased)
         {
             //player aim

@@ -8,7 +8,10 @@ public class DeathTrigger : MonoBehaviour {
     {
         if (other.CompareTag("Player"))
         {
-            GameManager.instance.GameOver();
+            if (!GameManager.instance.gameOver)
+            {
+                GameManager.instance.GameOver();
+            }
         }
     }
 }

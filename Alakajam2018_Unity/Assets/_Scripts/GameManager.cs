@@ -19,6 +19,8 @@ public class GameManager : MonoBehaviour {
 
     public static int currentLeafHashCode;
 
+    public bool gameOver;
+
     private void Awake()
     {
         //If the variable instance has not be initialized, set it equal to this
@@ -29,6 +31,8 @@ public class GameManager : MonoBehaviour {
         //(there can only be one GameManager)
         else if (instance != this)
             Destroy(gameObject);
+
+        gameOver = false;
     }
 
     void Start()
@@ -37,9 +41,12 @@ public class GameManager : MonoBehaviour {
     }
 
 
+
     public void GameOver()
     {
-        gameOverUI.gameObject.SetActive(true);
+        gameOver = true;
+
+        gameOverUI.SetActive(true);
     }
 
     void LockMouse()

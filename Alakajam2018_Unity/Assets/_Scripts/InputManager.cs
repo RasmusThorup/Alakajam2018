@@ -13,6 +13,8 @@ public class InputManager : MonoBehaviour {
 
     void Update()
     {
+        if (GameManager.instance.gameOver)
+            return;
 
         playerAim = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
         if (playerAim.magnitude < deadzone)
