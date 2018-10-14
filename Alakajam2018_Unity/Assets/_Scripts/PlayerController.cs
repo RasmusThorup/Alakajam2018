@@ -146,16 +146,14 @@ public class PlayerController : MonoBehaviour {
         //Building Jump Force
         jumpingForce += jumpingForceTimer;
 
+        float jumpingForce01 =(jumpingForce - jumpingForceMinMax.x)/ (jumpingForceMinMax.y - jumpingForceMinMax.x);
 
         //Setting UI canon aim slider
         canonAimSlider.value = jumpingForce;
 
         //Setting bullet time
-
         Time.timeScale = timeSlowdown;
         Time.fixedDeltaTime = .02f * Time.timeScale;
-
-
 
         //FMOD Charge
         if (!jumpCharging.IsPlaying())
@@ -163,7 +161,7 @@ public class PlayerController : MonoBehaviour {
             jumpCharging.Play();
         }
 
-        jumpCharging.SetParameter("ChargeUp", (jumpingForce-jumpingForceMinMax.x / (jumpingForceMinMax.y - jumpingForceMinMax.x)));
+        jumpCharging.SetParameter("ChargeUp", jumpingForce01);
     }
 
     void PlayerCanon(){

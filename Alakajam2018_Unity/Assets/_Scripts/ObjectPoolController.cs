@@ -17,7 +17,6 @@ public class ObjectPoolController : MonoBehaviour {
     List<GameObject> pooledObjects;
 
 
-
     private void Awake()
     {
         current = this;

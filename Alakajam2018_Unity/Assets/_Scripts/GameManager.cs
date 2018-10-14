@@ -38,6 +38,10 @@ public class GameManager : MonoBehaviour {
             Destroy(gameObject);
 
         gameOver = false;
+
+        //Stuff to do if player killed by cherry
+        player.GetComponent<PlayerController>().enabled = true;
+        player.GetComponent<Collider>().enabled = true;
     }
 
     void Start()

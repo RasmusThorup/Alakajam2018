@@ -19,8 +19,6 @@ public class SpawnerMovement : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-
-
         Vector3 last = (distance) + distance * CalculateSine(time);
 
         time += Time.deltaTime / distance.magnitude * speed;
