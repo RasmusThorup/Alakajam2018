@@ -33,9 +33,6 @@ public class CherrySpawner : MonoBehaviour {
             cherry.SetActive(false);
         }
 
-        GameObject player = GameObject.FindWithTag("Player");
-        playerTrans= player.transform;
-
         warningGo.SetActive(false);
 
     }
@@ -48,7 +45,7 @@ public class CherrySpawner : MonoBehaviour {
             return;
         }
 
-        if (playerTrans.position.y<10)
+        if (playerTrans.position.y<100)
         {
             return;
         }
