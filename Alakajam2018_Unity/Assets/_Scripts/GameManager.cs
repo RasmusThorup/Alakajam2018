@@ -17,6 +17,8 @@ public class GameManager : MonoBehaviour {
     [SerializeField]
     public static int highScore;
 
+    public static int currentLeafHashCode;
+
     private void Awake()
     {
         //If the variable instance has not be initialized, set it equal to this
