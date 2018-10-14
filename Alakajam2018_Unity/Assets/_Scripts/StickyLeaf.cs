@@ -22,6 +22,11 @@ public class StickyLeaf : MonoBehaviour {
         ownHashCode = GetHashCode();
     }
 
+    private void OnEnable()
+    {
+        leafCollider.enabled = true;
+    }
+
     private void OnCollisionEnter(Collision collision)
     {
         if (GameManager.instance.gameOver)
