@@ -39,7 +39,6 @@ GameObject:
   - component: {fileID: 4672203921451252}
   - component: {fileID: 114711351248758852}
   - component: {fileID: 114986286624118058}
-  - component: {fileID: 114064303474463256}
   m_Layer: 0
   m_Name: LeafSpawner 1
   m_TagString: Untagged
@@ -65,6 +64,21 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 0
+--- !u!1 &1605650531906758
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4478932087607162}
+  m_Layer: 0
+  m_Name: PooledObjects
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &1704539030766368
 GameObject:
   m_ObjectHideFlags: 0
@@ -75,7 +89,6 @@ GameObject:
   - component: {fileID: 4170534976990946}
   - component: {fileID: 114190941248144222}
   - component: {fileID: 114534786510171504}
-  - component: {fileID: 114303514054125708}
   m_Layer: 0
   m_Name: LeafSpawner 2
   m_TagString: Untagged
@@ -93,7 +106,6 @@ GameObject:
   - component: {fileID: 4287707273729330}
   - component: {fileID: 114423610726156232}
   - component: {fileID: 114473176688157270}
-  - component: {fileID: 114039519750035916}
   m_Layer: 0
   m_Name: LeafSpawner 3
   m_TagString: Untagged
@@ -109,6 +121,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4465336777316508}
+  - component: {fileID: 114407349222956046}
   m_Layer: 0
   m_Name: LeafSpawners
   m_TagString: Untagged
@@ -159,7 +172,7 @@ Transform:
   m_Children:
   - {fileID: 4982826567720444}
   m_Father: {fileID: 4465336777316508}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4287707273729330
 Transform:
@@ -173,7 +186,7 @@ Transform:
   m_Children:
   - {fileID: 4690968952907936}
   m_Father: {fileID: 4465336777316508}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4465336777316508
 Transform:
@@ -185,10 +198,24 @@ Transform:
   m_LocalPosition: {x: -7.1881976, y: 20.915287, z: -30.298647}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
+  - {fileID: 4478932087607162}
   - {fileID: 4672203921451252}
   - {fileID: 4170534976990946}
   - {fileID: 4287707273729330}
   m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4478932087607162
+Transform:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1605650531906758}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 7.4908905, y: -16.670288, z: 30.735897}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4465336777316508}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4672203921451252
@@ -203,7 +230,7 @@ Transform:
   m_Children:
   - {fileID: 4083004517465084}
   m_Father: {fileID: 4465336777316508}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4690968952907936
 Transform:
@@ -357,36 +384,6 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1555560128992944}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
---- !u!114 &114039519750035916
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1772455774041990}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3c373a28c99e64ee0904f298cd438dcf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  pooledObject: {fileID: 1616588552890358, guid: e87751d76b7954f649346b710879e043,
-    type: 2}
-  pooledAmount: 15
-  willGrow: 0
---- !u!114 &114064303474463256
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1279618825832936}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3c373a28c99e64ee0904f298cd438dcf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  pooledObject: {fileID: 1616588552890358, guid: e87751d76b7954f649346b710879e043,
-    type: 2}
-  pooledAmount: 15
-  willGrow: 0
 --- !u!114 &114190941248144222
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -401,12 +398,12 @@ MonoBehaviour:
   spawnIntervalMin: 0.5
   spawnIntervalMax: 0.7
   spawnOffset: {x: 0, y: 0, z: 0}
---- !u!114 &114303514054125708
+--- !u!114 &114407349222956046
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1704539030766368}
+  m_GameObject: {fileID: 1788062871752886}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3c373a28c99e64ee0904f298cd438dcf, type: 3}
@@ -414,8 +411,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pooledObject: {fileID: 1616588552890358, guid: e87751d76b7954f649346b710879e043,
     type: 2}
-  pooledAmount: 15
+  pooledAmount: 40
   willGrow: 0
+  poolParent: {fileID: 4478932087607162}
 --- !u!114 &114423610726156232
 MonoBehaviour:
   m_ObjectHideFlags: 1

@@ -59,4 +59,5 @@ public class SceneFader : MonoBehaviour {
             yield return 0;
         }
     }
+
 }
