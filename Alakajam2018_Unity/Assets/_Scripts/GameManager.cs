@@ -51,6 +51,8 @@ public class GameManager : MonoBehaviour {
     {
         gameOver = true;
 
+        Time.timeScale = 1;
+
         gameOverUI.SetActive(true);
 
         player.SetActive(false);

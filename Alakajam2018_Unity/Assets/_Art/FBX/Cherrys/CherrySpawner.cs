@@ -45,7 +45,7 @@ public class CherrySpawner : MonoBehaviour {
             return;
         }
 
-        if (playerTrans.position.y<100)
+        if (playerTrans.position.y<125)
         {
             return;
         }
@@ -70,13 +70,14 @@ public class CherrySpawner : MonoBehaviour {
     IEnumerator SpawnCherryBomb(){
 
         warningGo.SetActive(true);
+        warningGo.transform.position = new Vector3(transform.position.x, warningGo.transform.position.y, warningGo.transform.position.z);
         bombingActive = true;
 
         yield return new WaitForSeconds(warningTime);
 
         warningGo.SetActive(false);
 
-        GameObject cherryGO = cherryBombsToSpawn[Random.Range(0, 1)];
+        GameObject cherryGO = cherryBombsToSpawn[0];
         cherryGO.SetActive(true);
         cherryGO.transform.position = transform.position;
 
