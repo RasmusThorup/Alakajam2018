@@ -15,6 +15,10 @@ public class LockCameraAxis : CinemachineExtension
     public float m_YLockedPosition;
     public float m_ZLockedPosition;
 
+
+    public float currentYPos;
+    public float lastYPos;
+
     protected override void PostPipelineStageCallback(
         CinemachineVirtualCameraBase vcam,
         CinemachineCore.Stage stage, ref CameraState state, float deltaTime)
@@ -25,8 +29,17 @@ public class LockCameraAxis : CinemachineExtension
             if (lockXPos)
                 pos.x = m_XLockedPosition;
 
-            if (lockYPos)
-                pos.y = m_YLockedPosition;
+            if (lockYPos){
+                currentYPos = state.RawPosition.y;
+                if (currentYPos >= lastYPos)
+                {
+                    pos.y =lastYPos = currentYPos;
+
+                } else
+                {
+                    pos.y = lastYPos;
+                }
+            }
 
             if (lockZPos)
                 pos.z = m_ZLockedPosition;

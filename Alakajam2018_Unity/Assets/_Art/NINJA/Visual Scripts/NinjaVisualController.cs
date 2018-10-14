@@ -11,15 +11,15 @@ public class NinjaVisualController : MonoBehaviour {
 
     public Rigidbody playerRigid;
 
+    [HideInInspector]
+    public bool ninjaVisualEnabled;
+
     private void Start()
     {
         foreach (var pose in NinjaPoses)
         {
             pose.SetActive(false);
         }
-
-
-        NinjaPoses[0].SetActive(true);
     }
 
     private void Update()
@@ -43,5 +43,11 @@ public class NinjaVisualController : MonoBehaviour {
 
         changePoseEvent.Invoke();
 
+    }
+
+    public void EnableStartingPose()
+    {
+        NinjaPoses[0].SetActive(true);
+        ninjaVisualEnabled = true;
     }
 }
