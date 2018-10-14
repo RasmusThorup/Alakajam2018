@@ -240,7 +240,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4756445100886288, guid: 3fd7d43b87c094c698875c5a8df30165, type: 2}
       propertyPath: m_RootOrder
-      value: 15
+      value: 16
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3fd7d43b87c094c698875c5a8df30165, type: 2}
@@ -272,8 +272,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a5e45e9b8cdc5415086a6d7a5d2e2e1b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 1346349916}
+  player: {fileID: 0}
   gameOverUI: {fileID: 0}
+  deadSound: {fileID: 0}
   score: 0
   gameOver: 0
 --- !u!4 &328542345
@@ -287,7 +288,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 16
+  m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &372572992
 Prefab:
