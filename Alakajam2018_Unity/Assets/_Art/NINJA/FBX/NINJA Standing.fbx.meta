@@ -1,15 +1,20 @@
 fileFormatVersion: 2
-guid: ecc1de0fb2b78484ea6fa18a806a14fc
+guid: 591ced1f31cdc4ee48d53335a66c1e7e
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
     100000: //RootNode
     400000: //RootNode
-    2100000: No Name
+    2100000: Pose Looking Out
     2300000: //RootNode
     3300000: //RootNode
-    4300000: Bandana
-  externalObjects: {}
+    4300000: Pose_Looking_Out_1
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Pose Looking Out
+    second: {fileID: 2100000, guid: 0343c1a018c764f0f825764c34784718, type: 2}
   materials:
     importMaterials: 1
     materialName: 0

@@ -9,11 +9,15 @@ public class StickyLeaf : MonoBehaviour {
     Rigidbody playerRigid;
     public Collider leafCollider;
 
+    NinjaVisualController ninjaVisual;
+
     private void Start()
     {
         GameObject player = GameObject.FindWithTag("Player");
         playerController = player.GetComponent<PlayerController>();
         playerRigid = player.GetComponent<Rigidbody>();
+
+        ninjaVisual = FindObjectOfType<NinjaVisualController>();
     }
 
     private void OnCollisionEnter(Collision collision)
@@ -33,6 +37,15 @@ public class StickyLeaf : MonoBehaviour {
             playerRigid.useGravity = false;
 
             leafCollider.enabled = false;
+
+            if (collision.contacts[0].normal.y<0) // negative is up
+            {
+                ninjaVisual.ChangeNinjaPose(0);
+            }else
+            {
+                ninjaVisual.ChangeNinjaPose(2);
+            }
+
         }
     }
 
