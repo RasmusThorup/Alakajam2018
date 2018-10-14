@@ -9,7 +9,11 @@ public class StickyLeaf : MonoBehaviour {
     Rigidbody playerRigid;
     public Collider leafCollider;
 
+<<<<<<< HEAD
     NinjaVisualController ninjaVisual;
+=======
+    int ownHashCode;
+>>>>>>> master
 
     private void Start()
     {
@@ -17,7 +21,11 @@ public class StickyLeaf : MonoBehaviour {
         playerController = player.GetComponent<PlayerController>();
         playerRigid = player.GetComponent<Rigidbody>();
 
+<<<<<<< HEAD
         ninjaVisual = FindObjectOfType<NinjaVisualController>();
+=======
+        ownHashCode = GetHashCode();
+>>>>>>> master
     }
 
     private void OnCollisionEnter(Collision collision)
@@ -53,6 +61,14 @@ public class StickyLeaf : MonoBehaviour {
     {
         if (other.CompareTag("Player"))
         {
+            if (GameManager.currentLeafHashCode != 0)
+            {
+                leafCollider.enabled = false;
+                return;
+            }
+
+            GameManager.currentLeafHashCode = ownHashCode;
+
             other.transform.SetParent(transform);
         }
     }
@@ -61,6 +77,15 @@ public class StickyLeaf : MonoBehaviour {
     {
         if (other.CompareTag("Player"))
         {
+
+            if (GameManager.currentLeafHashCode != ownHashCode)
+            {
+                leafCollider.enabled = true;
+                return;
+            }
+
+            GameManager.currentLeafHashCode = 0;
+
             other.transform.parent = null;
 
             leafCollider.enabled = true;

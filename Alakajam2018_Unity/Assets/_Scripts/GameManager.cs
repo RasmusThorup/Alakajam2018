@@ -8,22 +8,16 @@ public class GameManager : MonoBehaviour {
     //Instance af selve gamemanager
     public static GameManager instance;
 
-    public int playerLives;
-
-    public float score;
-
-    public int highScore;
-
     public GameObject player;
 
-    private GameOverUI gameOverUI;
+    public GameObject gameOverUI;
 
+    [SerializeField]
+    public float score;
+    [SerializeField]
+    public static int highScore;
 
-
-
-
-    bool isGameOver;
-    bool gameHasStarted;
+    public static int currentLeafHashCode;
 
     private void Awake()
     {
@@ -39,16 +33,9 @@ public class GameManager : MonoBehaviour {
 
     void Start()
     {
-        gameOverUI = GetComponent<GameOverUI>();
-
         LockMouse();
     }
 
-
-    public bool IsActiveGame()
-    {
-        return gameHasStarted && !isGameOver;
-    }
 
     public void GameOver()
     {

@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class LeafMovement : MonoBehaviour {
 
-   float fallingSpeed;
+    float fallingSpeed;
 
     public Vector2 fallingSpeedMinMax; 
 

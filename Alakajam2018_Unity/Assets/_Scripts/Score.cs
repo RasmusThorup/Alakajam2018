@@ -10,14 +10,13 @@ public class Score : MonoBehaviour {
     [HideInInspector]
     public int currentScore;
 
-    private int highScore;
     private int playerPos;
+
+    public TMP_Text points;
 
 	void Start () 
     {
         player = GetComponent<GameManager>().player.transform;
-        highScore = GetComponent<GameManager>().highScore;
-
 	}
 	
 	void FixedUpdate () 
@@ -31,9 +30,11 @@ public class Score : MonoBehaviour {
         }
 
         //is current score higher than highscore?
-        if (currentScore > highScore)
+        if (currentScore > GameManager.highScore)
         {
-            highScore = currentScore;
+            GameManager.highScore = currentScore;
         }
+
+        points.text = currentScore.ToString();
     }
 }
