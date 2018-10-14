@@ -20,7 +20,7 @@ public class GameManager : MonoBehaviour {
     [SerializeField]
     public float score;
     [SerializeField]
-    public static int highScore;
+    public static float highScore;
 
     public static int currentLeafHashCode;
 

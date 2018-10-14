@@ -33,7 +33,7 @@ public class MenuManager : MonoBehaviour {
 
     void SetHighScore()
     {
-        highestscore.text = GameManager.highScore.ToString();
+        highestscore.text = GameManager.highScore.ToString("F0");
     }
 
     
