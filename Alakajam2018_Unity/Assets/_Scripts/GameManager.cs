@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using FMODUnity;
 
 public class GameManager : MonoBehaviour {
 
@@ -11,6 +12,10 @@ public class GameManager : MonoBehaviour {
     public GameObject player;
 
     public GameObject gameOverUI;
+
+    public StudioEventEmitter deadSound;
+
+   
 
     [SerializeField]
     public float score;
@@ -47,6 +52,14 @@ public class GameManager : MonoBehaviour {
         gameOver = true;
 
         gameOverUI.SetActive(true);
+
+        player.SetActive(false);
+
+        if (!deadSound.IsPlaying())
+        {
+            deadSound.Play(); 
+
+        }
     }
 
     void LockMouse()
