@@ -8,9 +8,9 @@ public class Score : MonoBehaviour {
     private Transform player;
 
     [HideInInspector]
-    public int currentScore;
+    public float currentScore;
 
-    private int playerPos;
+    private float playerPos;
 
     public TMP_Text points;
 
@@ -21,12 +21,12 @@ public class Score : MonoBehaviour {
 	
 	void FixedUpdate () 
     {
-        playerPos = (int)player.transform.position.y;
+        playerPos = player.transform.position.y;
 
         //incase player falls down, keeps points
-        if (playerPos >= currentScore)
+        if (playerPos * 100 >= currentScore)
         {
-            currentScore = playerPos;
+            currentScore = playerPos * 100;
         }
 
         //is current score higher than highscore?
@@ -35,6 +35,6 @@ public class Score : MonoBehaviour {
             GameManager.highScore = currentScore;
         }
 
-        points.text = currentScore.ToString();
+        points.text = currentScore.ToString("F0");
     }
 }
