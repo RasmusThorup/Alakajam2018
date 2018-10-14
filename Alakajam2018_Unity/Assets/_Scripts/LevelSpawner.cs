@@ -6,7 +6,7 @@ public class LevelSpawner : MonoBehaviour {
 
     public static List<GameObject> levels = new List<GameObject>();
     private SpawnLevel spawnLevel;
-    private int maxLevels = 2;
+    //private int maxLevels = 2;
 
 	void Start () 
     {
@@ -19,18 +19,18 @@ public class LevelSpawner : MonoBehaviour {
         if (levels.Contains(gameObject) == false) //hvis den statiske liste ikke indeholder dette component, så tilføj det til listen.
         {
             levels.Add(gameObject);
-            CheckSpawnedCount();
+            //CheckSpawnedCount();
             spawnLevel.LevelSpawn(transform);//spawn level
         }
     }
 
-    void CheckSpawnedCount()//destroy oldest level
-    {
-        if (levels.Count > maxLevels)
-        {
-            GameObject firstAdded = levels[0];
-            levels.RemoveAt(0);
-            Destroy(firstAdded.gameObject);
-        }
-    }
+    //void CheckSpawnedCount()//destroy oldest level
+    //{
+    //    if (levels.Count > maxLevels)
+    //    {
+    //        GameObject firstAdded = levels[0];
+    //        levels.RemoveAt(0);
+    //        Destroy(firstAdded.gameObject);
+    //    }
+    //}
 }
