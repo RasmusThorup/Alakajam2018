@@ -40,6 +40,8 @@ public class StickyLeaf : MonoBehaviour {
 
             leafCollider.enabled = false;
 
+            playerController.LandedOnLeaf();
+
             if (collision.contacts[0].normal.y<0) // negative is up
             {
                 ninjaVisual.ChangeNinjaPose(0);
