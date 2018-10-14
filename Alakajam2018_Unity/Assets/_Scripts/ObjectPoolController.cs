@@ -12,7 +12,10 @@ public class ObjectPoolController : MonoBehaviour {
     public int pooledAmount = 20;
     public bool willGrow;
 
+    public Transform poolParent;
+
     List<GameObject> pooledObjects;
+
 
 
     private void Awake()
@@ -25,7 +28,7 @@ public class ObjectPoolController : MonoBehaviour {
 
         for (int i = 0; i < pooledAmount; i++)
         {
-            GameObject obj = (GameObject)Instantiate(pooledObject);
+            GameObject obj = (GameObject)Instantiate(pooledObject, poolParent);
             obj.SetActive(false);
             pooledObjects.Add(obj); 
         }
@@ -44,7 +47,7 @@ public class ObjectPoolController : MonoBehaviour {
 
         if (willGrow)
         {
-            GameObject obj = (GameObject)Instantiate(pooledObject);
+            GameObject obj = (GameObject)Instantiate(pooledObject, poolParent);
             pooledObjects.Add(obj);
             return obj; 
         }
