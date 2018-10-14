@@ -23,10 +23,26 @@ MonoBehaviour:
   - {fileID: 114398882204451962}
   - {fileID: 114792001165739852}
   - {fileID: 114345205902599938}
+  - {fileID: 114014197256133858}
   MasterBankRef: {fileID: 114400658379774162}
   StringsBankRef: {fileID: 114792710698336882}
-  stringsBankWriteTime: 636751214020000000
+  stringsBankWriteTime: 636751290570000000
   cacheVersion: 2
+--- !u!114 &114001741016745886
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: ChargeUp
+  Min: 0
+  Max: 1
+  Default: 0
 --- !u!114 &114005132667909282
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -41,7 +57,7 @@ MonoBehaviour:
   Path: snapshot:/PauseMenu
   guid: 63a2e0f8fcf8164f8f5964ee479da72d
   Banks:
-  - {fileID: 114273189448212804}
+  - {fileID: 0}
   IsStream: 0
   Is3D: 0
   IsOneShot: 0
@@ -49,6 +65,29 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 0
+--- !u!114 &114014197256133858
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: event:/VelocityWind
+  guid: 85883d080453cf46b4f1e8c75eb434aa
+  Banks:
+  - {fileID: 114400658379774162}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 0
+  Parameters:
+  - {fileID: 114825136680804458}
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 4710
 --- !u!114 &114030323445638616
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -68,7 +107,7 @@ MonoBehaviour:
   Is3D: 0
   IsOneShot: 1
   Parameters:
-  - {fileID: 114263595102638152}
+  - {fileID: 114001741016745886}
   MinDistance: 0
   MaxDistance: 0
   Length: 5300
@@ -136,7 +175,7 @@ MonoBehaviour:
   Is3D: 0
   IsOneShot: 0
   Parameters:
-  - {fileID: 114235502071038302}
+  - {fileID: 114503301752933548}
   MinDistance: 0
   MaxDistance: 0
   Length: 208089
@@ -231,11 +270,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: /Users/RasmusThorup/Documents/GitHub/Alakajam2018/Alakajam2018_Unity/FMOD
     Banks/Desktop/Master Bank.bank
-  lastModified: 636751214020000000
+  lastModified: 636751290570000000
   LoadResult: 0
   FileSizes:
   - Name: 
-    Value: 8324736
+    Value: 8345088
   Exists: 1
 --- !u!114 &114469977526849660
 MonoBehaviour:
@@ -279,6 +318,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Name: ChargeUp
+  Min: 0
+  Max: 1
+  Default: 0
+--- !u!114 &114503301752933548
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: escape
   Min: 0
   Max: 1
   Default: 0
@@ -355,7 +409,7 @@ MonoBehaviour:
   Path: event:/UI Click
   guid: 451bc3f3e091ce48a3536a5f2f58612a
   Banks:
-  - {fileID: 114273189448212804}
+  - {fileID: 0}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -379,6 +433,21 @@ MonoBehaviour:
   Max: 1
   Default: 0
 --- !u!114 &114686627889598254
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: Wind
+  Min: 0
+  Max: 1
+  Default: 0
+--- !u!114 &114699561891280214
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -427,11 +496,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Path: FMOD Banks/Desktop/Master Bank.strings.bank
-  lastModified: 636751214020000000
+  lastModified: 636751290570000000
   LoadResult: 0
   FileSizes:
   - Name: 
-    Value: 1160
+    Value: 1202
   Exists: 1
 --- !u!114 &114797646871417420
 MonoBehaviour:
@@ -445,6 +514,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Name: ChargeUp
+  Min: 0
+  Max: 1
+  Default: 0
+--- !u!114 &114825136680804458
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: Velocity
   Min: 0
   Max: 1
   Default: 0
@@ -482,7 +566,7 @@ MonoBehaviour:
   Is3D: 0
   IsOneShot: 0
   Parameters:
-  - {fileID: 114911600250949480}
+  - {fileID: 114699561891280214}
   MinDistance: 0
   MaxDistance: 0
   Length: 32000

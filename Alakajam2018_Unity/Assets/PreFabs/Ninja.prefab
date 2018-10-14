@@ -92,6 +92,22 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1 &1115903213271738
+GameObject:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4155003633782944}
+  - component: {fileID: 114286888233149188}
+  m_Layer: 0
+  m_Name: VelocityWind
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &1146933519972302
 GameObject:
   m_ObjectHideFlags: 1
@@ -533,6 +549,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4014604630844190}
+  - component: {fileID: 114223657646415824}
   m_Layer: 0
   m_Name: NinjaAudio
   m_TagString: Untagged
@@ -733,6 +750,7 @@ Transform:
   - {fileID: 4464762841613960}
   - {fileID: 4495273559101154}
   - {fileID: 4247703059160990}
+  - {fileID: 4155003633782944}
   m_Father: {fileID: 4732502308241712}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -819,6 +837,19 @@ Transform:
   - {fileID: 4281358108028652}
   m_Father: {fileID: 4069458449543902}
   m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4155003633782944
+Transform:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1115903213271738}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4014604630844190}
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4166466948800832
 Transform:
@@ -2074,6 +2105,43 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 1
+--- !u!114 &114223657646415824
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1654701455504642}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c6e74176751a545e3a81662cf1206f88, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerController: {fileID: 114606314864599964}
+  playerRigid: {fileID: 54823871501388882}
+  windEvent: {fileID: 114286888233149188}
+  maxVelocitySpeed: 25
+--- !u!114 &114286888233149188
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1115903213271738}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: event:/VelocityWind
+  PlayEvent: 11
+  StopEvent: 12
+  CollisionTag: 
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 0
+  OverrideMaxDistance: 0
 --- !u!114 &114306884946497598
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2218,18 +2286,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ninjaVisualController: {fileID: 114764630759910138}
-  whatIsLeaf:
-    serializedVersion: 2
-    m_Bits: 0
   aim: {fileID: 4172905052973030}
   jumpingForceTimer: 0.15
   jumpingForceMinMax: {x: 10, y: 20}
   gravityAmount: 9.81
   timeSlowdown: 0.152
-  numberOfDashes: 0
+  numberOfDashes: 10
   airControlSpeed: 5
   canAim: 0
   canonAimSlider: {fileID: 114407878703094062}
+  firstDashHappend: 0
   jumpCharging: {fileID: 114486863069412736}
   playerCanonShoot:
     m_PersistentCalls:
@@ -2322,6 +2388,7 @@ MonoBehaviour:
   - {fileID: 1179094879611760}
   - {fileID: 1759771661677398}
   playerRigid: {fileID: 54823871501388882}
+  ninjaVisualEnabled: 0
 --- !u!114 &114941944857486584
 MonoBehaviour:
   m_ObjectHideFlags: 1
