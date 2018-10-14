@@ -753,11 +753,48 @@ Prefab:
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4790cf28f94d94b10ae59001f9b3957e, type: 2}
   m_IsPrefabAsset: 0
---- !u!1 &1346349916 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1029898807698182, guid: eea12e028f1784e76b517cb3bc302e1a,
-    type: 2}
-  m_PrefabInternal: {fileID: 257846630}
+--- !u!1001 &1321253347
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4087613931818746, guid: b9eaa09904a2e4feabe6fb62baaee5f2, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -12.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4087613931818746, guid: b9eaa09904a2e4feabe6fb62baaee5f2, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 22.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4087613931818746, guid: b9eaa09904a2e4feabe6fb62baaee5f2, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 6.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4087613931818746, guid: b9eaa09904a2e4feabe6fb62baaee5f2, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0.17149085
+      objectReference: {fileID: 0}
+    - target: {fileID: 4087613931818746, guid: b9eaa09904a2e4feabe6fb62baaee5f2, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4087613931818746, guid: b9eaa09904a2e4feabe6fb62baaee5f2, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4087613931818746, guid: b9eaa09904a2e4feabe6fb62baaee5f2, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 0.98518574
+      objectReference: {fileID: 0}
+    - target: {fileID: 4087613931818746, guid: b9eaa09904a2e4feabe6fb62baaee5f2, type: 2}
+      propertyPath: m_RootOrder
+      value: 15
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: b9eaa09904a2e4feabe6fb62baaee5f2, type: 2}
+  m_IsPrefabAsset: 0
 --- !u!1 &1384533725
 GameObject:
   m_ObjectHideFlags: 0
@@ -1253,13 +1290,13 @@ Light:
   m_Enabled: 1
   serializedVersion: 8
   m_Type: 1
-  m_Color: {r: 1, g: 0.95686275, b: 0.8392157, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Intensity: 1
   m_Range: 10
   m_SpotAngle: 30
   m_CookieSize: 10
   m_Shadows:
-    m_Type: 2
+    m_Type: 0
     m_Resolution: -1
     m_CustomResolution: -1
     m_Strength: 1
