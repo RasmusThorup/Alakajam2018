@@ -18,9 +18,11 @@ MonoBehaviour:
   - {fileID: 114550390122144618}
   - {fileID: 114030323445638616}
   - {fileID: 114847768139676466}
+  - {fileID: 114615478473334410}
+  - {fileID: 114272001290373348}
   MasterBankRef: {fileID: 114400658379774162}
   StringsBankRef: {fileID: 114792710698336882}
-  stringsBankWriteTime: 636750521440000000
+  stringsBankWriteTime: 636750720980000000
   cacheVersion: 2
 --- !u!114 &114030323445638616
 MonoBehaviour:
@@ -41,10 +43,10 @@ MonoBehaviour:
   Is3D: 0
   IsOneShot: 1
   Parameters:
-  - {fileID: 114232602014817670}
+  - {fileID: 114476580753715634}
   MinDistance: 0
   MaxDistance: 0
-  Length: 8006
+  Length: 5300
 --- !u!114 &114232602014817670
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -60,6 +62,29 @@ MonoBehaviour:
   Min: 0
   Max: 1
   Default: 0
+--- !u!114 &114272001290373348
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: event:/Music
+  guid: 43e4c67f22df054589c2339977aad467
+  Banks:
+  - {fileID: 114400658379774162}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters:
+  - {fileID: 114469977526849660}
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
 --- !u!114 &114331047355105646
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -107,12 +132,27 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: /Users/RasmusThorup/Documents/GitHub/Alakajam2018/Alakajam2018_Unity/FMOD
     Banks/Desktop/Master Bank.bank
-  lastModified: 636750521440000000
+  lastModified: 636750720980000000
   LoadResult: 0
   FileSizes:
   - Name: 
-    Value: 5047968
+    Value: 5372704
   Exists: 1
+--- !u!114 &114469977526849660
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: escape
+  Min: 0
+  Max: 1
+  Default: 0
 --- !u!114 &114476169660697976
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -125,6 +165,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Name: Wind
+  Min: 0
+  Max: 1
+  Default: 0
+--- !u!114 &114476580753715634
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: ChargeUp
   Min: 0
   Max: 1
   Default: 0
@@ -150,6 +205,43 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 2682
+--- !u!114 &114615478473334410
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: event:/Grab
+  guid: 3e37163240a34c48958115494b3b39ee
+  Banks:
+  - {fileID: 114400658379774162}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 540
+--- !u!114 &114663284550987604
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: Wind
+  Min: 0
+  Max: 1
+  Default: 0
 --- !u!114 &114686627889598254
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -177,11 +269,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Path: FMOD Banks/Desktop/Master Bank.strings.bank
-  lastModified: 636750521440000000
+  lastModified: 636750720980000000
   LoadResult: 0
   FileSizes:
   - Name: 
-    Value: 804
+    Value: 876
   Exists: 1
 --- !u!114 &114797646871417420
 MonoBehaviour:
@@ -232,7 +324,7 @@ MonoBehaviour:
   Is3D: 0
   IsOneShot: 0
   Parameters:
-  - {fileID: 114826319241846982}
+  - {fileID: 114663284550987604}
   MinDistance: 0
   MaxDistance: 0
   Length: 32000

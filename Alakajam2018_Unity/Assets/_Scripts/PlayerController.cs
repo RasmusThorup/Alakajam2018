@@ -37,6 +37,8 @@ public class PlayerController : MonoBehaviour {
 
     Vector2 playerAim;
 
+    public VisualNinjaController visualNinjaController;
+
     void Start () {
 
         input = GetComponent<InputManager>();
@@ -114,6 +116,9 @@ public class PlayerController : MonoBehaviour {
         //Building Jump Force
         jumpingForce += jumpingForceTimer;
 
+        //Make the ninja squat
+        visualNinjaController.NinjaSquat(1 - ((jumpingForce -jumpingForceMinMax.x)/ (jumpingForceMinMax.y - jumpingForceMinMax.x)));
+
         //Setting UI canon aim slider
         canonAimSlider.value = jumpingForce;
 
@@ -150,6 +155,7 @@ public class PlayerController : MonoBehaviour {
         currentlyAiming = false;
         canAim = false;
         doOnceDashes = true;
+        visualNinjaController.NinjaSquat(1);
     }
 
     void AirControl(){
