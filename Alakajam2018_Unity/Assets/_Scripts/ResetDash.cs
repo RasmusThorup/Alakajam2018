@@ -49,22 +49,4 @@ public class ResetDash : MonoBehaviour
 
 
     }
-
-    //private void OnCollisionEnter(Collision collision)
-    //{
-    //    if (collision.collider.CompareTag("Player"))
-    //    {
-    //        //Start Player ability to aim
-    //        playerController.canAim = true;
-
-    //        //Reset dash
-    //        playerController.ResetDashAmount();
-
-
-    //        //Stopping Player momentum
-    //        playerRigid.velocity = Vector3.zero;
-    //        playerController.gravityAmount = 0;
-    //        playerRigid.useGravity = false;
-    //    }
-    //}
 }

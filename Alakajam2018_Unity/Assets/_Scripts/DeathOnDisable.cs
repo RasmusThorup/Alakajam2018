@@ -6,6 +6,10 @@ public class DeathOnDisable : MonoBehaviour {
 
     private void OnDisable()
     {
-        GameManager.instance.GameOver();
+        if (!GameManager.instance.gameOver)
+        {
+
+            GameManager.instance.GameOver();
+        }
     }
 }

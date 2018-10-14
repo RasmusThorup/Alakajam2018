@@ -47,9 +47,12 @@ public class PlayerController : MonoBehaviour {
     [Header("FMOD Refs")]
     public StudioEventEmitter jumpCharging;
 
+    public StudioEventEmitter chargeSnapshot; 
+
     [Header("Events FOR STUFF")]
     public UnityEvent playerCanonShoot;
     public UnityEvent playerLandedOnLeaf;
+
 
 
 
@@ -59,7 +62,7 @@ public class PlayerController : MonoBehaviour {
         playerRigidbody = GetComponent<Rigidbody>();
 
         //Setting some things
-        canAim = true;
+        //canAim = true;
         doOnceDashes = true;
 
         if (numberOfDashes!=0)
@@ -83,6 +86,10 @@ public class PlayerController : MonoBehaviour {
 
     private void FixedUpdate()
     {
+        if (GameManager.instance.gameOver)
+            return;
+        
+
         if (canAim && input.isJumping && jumpingForce<jumpingForceMinMax.y && JumpButtonReleased)
         {
             //player aim
@@ -124,7 +131,13 @@ public class PlayerController : MonoBehaviour {
     }
 
     void PlayerAiming(){
+
+        if (!jumpCharging.IsPlaying())
+        {
+            chargeSnapshot.Play();
+        }
         currentlyAiming = true;
+
         //Setting the aim art
         float aimRotation = -(Mathf.Atan2(input.playerAim.x, input.playerAim.y) * 180 / Mathf.PI);
 
@@ -138,8 +151,10 @@ public class PlayerController : MonoBehaviour {
         canonAimSlider.value = jumpingForce;
 
         //Setting bullet time
+
         Time.timeScale = timeSlowdown;
         Time.fixedDeltaTime = .02f * Time.timeScale;
+
 
 
         //FMOD Charge
@@ -152,6 +167,7 @@ public class PlayerController : MonoBehaviour {
     }
 
     void PlayerCanon(){
+        chargeSnapshot.Stop();
 
         firstDashHappend = true;
 

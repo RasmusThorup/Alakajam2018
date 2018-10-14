@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using FMODUnity;
 
 public class GameManager : MonoBehaviour {
 
@@ -12,12 +13,18 @@ public class GameManager : MonoBehaviour {
 
     public GameObject gameOverUI;
 
+    public StudioEventEmitter deadSound;
+
+   
+
     [SerializeField]
     public float score;
     [SerializeField]
     public static int highScore;
 
     public static int currentLeafHashCode;
+
+    public bool gameOver;
 
     private void Awake()
     {
@@ -29,6 +36,8 @@ public class GameManager : MonoBehaviour {
         //(there can only be one GameManager)
         else if (instance != this)
             Destroy(gameObject);
+
+        gameOver = false;
     }
 
     void Start()
@@ -37,9 +46,20 @@ public class GameManager : MonoBehaviour {
     }
 
 
+
     public void GameOver()
     {
-        gameOverUI.gameObject.SetActive(true);
+        gameOver = true;
+
+        gameOverUI.SetActive(true);
+
+        player.SetActive(false);
+
+        if (!deadSound.IsPlaying())
+        {
+            deadSound.Play(); 
+
+        }
     }
 
     void LockMouse()

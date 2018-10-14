@@ -23,6 +23,11 @@ public class LeafSpawner : MonoBehaviour {
 
     private void Update()
     {
+        if (GameManager.instance.gameOver)
+        {
+            return;
+        }
+
         time -= Time.deltaTime;
 
         if (time <= 0)

@@ -14,7 +14,11 @@ public class FMOD_MainController : MonoBehaviour {
 
     private void FixedUpdate()
     {
-        print(playerRigid.velocity.magnitude);
+        if (GameManager.instance.gameOver)
+        {
+            windEvent.Stop();
+            return;
+        }
         windEvent.SetParameter("Velocity", playerRigid.velocity.magnitude / maxVelocitySpeed);
     }
 
