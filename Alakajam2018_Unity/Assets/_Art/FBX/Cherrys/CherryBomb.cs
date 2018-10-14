@@ -14,7 +14,6 @@ public class CherryBomb : MonoBehaviour {
         GameObject player = GameObject.FindWithTag("Player");
         playerController = player.GetComponent<PlayerController>();
         playerRigid = player.GetComponent<Rigidbody>();
-
     }
 	
 	// Update is called once per frame
@@ -42,5 +41,10 @@ public class CherryBomb : MonoBehaviour {
         {
             gameObject.SetActive(false);
         }
+    }
+
+    private void OnDisable()
+    {
+        CherrySpawner.bombingActive = false;
     }
 }

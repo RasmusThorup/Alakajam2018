@@ -14,6 +14,8 @@ public class Score : MonoBehaviour {
 
     public TMP_Text points;
 
+    public CherrySpawner cherrySpawner;
+
 	void Start () 
     {
         player = GetComponent<GameManager>().player.transform;

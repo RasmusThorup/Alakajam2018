@@ -21,7 +21,7 @@ public class CherrySpawner : MonoBehaviour {
     private float time;
 
 
-    public bool startBombing;
+    //public bool startBombing;
 
     public static bool bombingActive;
 
@@ -48,7 +48,7 @@ public class CherrySpawner : MonoBehaviour {
             return;
         }
 
-        if (!startBombing)
+        if (playerTrans.position.y<10)
         {
             return;
         }

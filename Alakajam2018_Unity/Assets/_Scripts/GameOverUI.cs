@@ -18,7 +18,7 @@ public class GameOverUI : MonoBehaviour {
     }
     void Update () 
     {
-        gameOverPoints.text = score.currentScore.ToString();
+        gameOverPoints.text = score.currentScore.ToString("F0");
 	}
 
     public void Retry()
