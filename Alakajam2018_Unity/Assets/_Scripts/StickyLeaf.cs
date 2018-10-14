@@ -9,11 +9,8 @@ public class StickyLeaf : MonoBehaviour {
     Rigidbody playerRigid;
     public Collider leafCollider;
 
-<<<<<<< HEAD
     NinjaVisualController ninjaVisual;
-=======
     int ownHashCode;
->>>>>>> master
 
     private void Start()
     {
@@ -21,11 +18,8 @@ public class StickyLeaf : MonoBehaviour {
         playerController = player.GetComponent<PlayerController>();
         playerRigid = player.GetComponent<Rigidbody>();
 
-<<<<<<< HEAD
         ninjaVisual = FindObjectOfType<NinjaVisualController>();
-=======
         ownHashCode = GetHashCode();
->>>>>>> master
     }
 
     private void OnCollisionEnter(Collision collision)
