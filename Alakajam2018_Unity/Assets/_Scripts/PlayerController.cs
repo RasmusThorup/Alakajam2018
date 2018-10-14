@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.Events;
+using FMODUnity;
 
 public class PlayerController : MonoBehaviour {
 
@@ -9,8 +11,6 @@ public class PlayerController : MonoBehaviour {
     Rigidbody playerRigidbody;
 
     public NinjaVisualController ninjaVisualController;
-
-    public LayerMask whatIsLeaf;
 
     public Transform aim;
     bool currentlyAiming;
@@ -40,6 +40,16 @@ public class PlayerController : MonoBehaviour {
     bool doOnceDashes;
 
     Vector2 playerAim;
+
+
+    [Header("FMOD Refs")]
+    public StudioEventEmitter jumpCharging;
+
+    [Header("Events FOR STUFF")]
+    public UnityEvent playerCanonShoot;
+    public UnityEvent playerLandedOnLeaf;
+
+
 
     void Start () {
 
@@ -107,9 +117,6 @@ public class PlayerController : MonoBehaviour {
 
         //Add player Gravity
         PlayerGravity();
-
-        //CheckForLeaf above and under;
-        //CheckForLeaf();
     }
 
     void PlayerAiming(){
@@ -129,6 +136,15 @@ public class PlayerController : MonoBehaviour {
         //Setting bullet time
         Time.timeScale = timeSlowdown;
         Time.fixedDeltaTime = .02f * Time.timeScale;
+
+
+        //FMOD Charge
+        if (!jumpCharging.IsPlaying())
+        {
+            jumpCharging.Play();
+        }
+
+        jumpCharging.SetParameter("ChargeUp", (jumpingForce-jumpingForceMinMax.x / (jumpingForceMinMax.y - jumpingForceMinMax.x)));
     }
 
     void PlayerCanon(){
@@ -159,17 +175,20 @@ public class PlayerController : MonoBehaviour {
         currentlyAiming = false;
         canAim = false;
         doOnceDashes = true;
+
+
+        //FMOD
+        if (jumpCharging.IsPlaying())
+        {
+            jumpCharging.Stop();
+        }
+
+        playerCanonShoot.Invoke();
+
     }
 
-    void CheckForLeaf(){
-
-        Ray rayUP = new Ray(transform.position, transform.up);
-        Ray rayDown = new Ray(transform.position, -transform.up);
-
-        RaycastHit hitInfo;
-
-        bool hitALeafUp = Physics.SphereCast(rayUP, 0.5f, 3.5f, whatIsLeaf);
-        bool hitALeafDown = Physics.SphereCast(rayDown, 0.5f, 3.5f, whatIsLeaf);
+    public void LandedOnLeaf(){
+        playerLandedOnLeaf.Invoke();
     }
 
     void AirControl(){
