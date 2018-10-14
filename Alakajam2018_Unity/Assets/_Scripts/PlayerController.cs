@@ -8,6 +8,10 @@ public class PlayerController : MonoBehaviour {
     InputManager input;
     Rigidbody playerRigidbody;
 
+    public NinjaVisualController ninjaVisualController;
+
+    public LayerMask whatIsLeaf;
+
     public Transform aim;
     bool currentlyAiming;
 
@@ -104,15 +108,20 @@ public class PlayerController : MonoBehaviour {
         //Add player Gravity
         PlayerGravity();
 
+        //CheckForLeaf above and under;
+        //CheckForLeaf();
     }
 
     void PlayerAiming(){
         currentlyAiming = true;
         //Setting the aim art
-        aim.eulerAngles = new Vector3(0, 0, -(Mathf.Atan2(input.playerAim.x, input.playerAim.y) * 180 / Mathf.PI));
+        float aimRotation = -(Mathf.Atan2(input.playerAim.x, input.playerAim.y) * 180 / Mathf.PI);
+
+        aim.eulerAngles = new Vector3(0, 0, aimRotation);
 
         //Building Jump Force
         jumpingForce += jumpingForceTimer;
+
 
         //Setting UI canon aim slider
         canonAimSlider.value = jumpingForce;
@@ -125,6 +134,8 @@ public class PlayerController : MonoBehaviour {
     void PlayerCanon(){
         // Player is jumping
         JumpButtonReleased = false;
+
+        ninjaVisualController.ChangeNinjaPose(1);
 
         //Stopping all other forces
         playerRigidbody.velocity = Vector3.zero;
@@ -140,8 +151,6 @@ public class PlayerController : MonoBehaviour {
 
         playerRigidbody.AddForce(playerAim * Mathf.Clamp(jumpingForce, jumpingForceMinMax.x, jumpingForceMinMax.y), ForceMode.VelocityChange);
 
-
-
         //Reset variables
         jumpingForce = jumpingForceMinMax.x;
         gravityAmount = initGravityAmount;
@@ -152,11 +161,20 @@ public class PlayerController : MonoBehaviour {
         doOnceDashes = true;
     }
 
+    void CheckForLeaf(){
+
+        Ray rayUP = new Ray(transform.position, transform.up);
+        Ray rayDown = new Ray(transform.position, -transform.up);
+
+        RaycastHit hitInfo;
+
+        bool hitALeafUp = Physics.SphereCast(rayUP, 0.5f, 3.5f, whatIsLeaf);
+        bool hitALeafDown = Physics.SphereCast(rayDown, 0.5f, 3.5f, whatIsLeaf);
+    }
+
     void AirControl(){
 
         playerRigidbody.AddForce(new Vector3(input.playerAim.x, 0, 0) * airControlSpeed, ForceMode.Acceleration);
-
-
     }
 
     public void PlayerGravity(){
