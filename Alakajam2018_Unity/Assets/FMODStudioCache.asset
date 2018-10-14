@@ -13,16 +13,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   EditorBanks:
   - {fileID: 114792710698336882}
-  - {fileID: 114969973159479368}
+  - {fileID: 114273189448212804}
   EditorEvents:
   - {fileID: 114550390122144618}
   - {fileID: 114030323445638616}
   - {fileID: 114847768139676466}
   - {fileID: 114343299846206010}
   - {fileID: 114923291019389104}
-  MasterBankRef: {fileID: 114969973159479368}
+  MasterBankRef: {fileID: 114273189448212804}
   StringsBankRef: {fileID: 114792710698336882}
-  stringsBankWriteTime: 636750720980000000
+  stringsBankWriteTime: 636750790060000000
   cacheVersion: 2
 --- !u!114 &114030323445638616
 MonoBehaviour:
@@ -38,15 +38,30 @@ MonoBehaviour:
   Path: event:/Charging
   guid: 456fec416de496439e7f71d7bdb7bb06
   Banks:
-  - {fileID: 114969973159479368}
+  - {fileID: 114273189448212804}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
   Parameters:
-  - {fileID: 114626891310775692}
+  - {fileID: 114186029615855858}
   MinDistance: 0
   MaxDistance: 0
   Length: 5300
+--- !u!114 &114165068096976436
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: Wind
+  Min: 0
+  Max: 1
+  Default: 0
 --- !u!114 &114171224563131342
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -66,6 +81,21 @@ MonoBehaviour:
   - Name: 
     Value: 5372704
   Exists: 1
+--- !u!114 &114186029615855858
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: ChargeUp
+  Min: 0
+  Max: 1
+  Default: 0
 --- !u!114 &114232602014817670
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -96,6 +126,25 @@ MonoBehaviour:
   Min: 0
   Max: 1
   Default: 0
+--- !u!114 &114273189448212804
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: /Users/madsr/Documents/GitHub/Alakajam2018/Alakajam2018_Unity/FMOD Banks/Desktop/Master
+    Bank.bank
+  lastModified: 636750790060000000
+  LoadResult: 0
+  FileSizes:
+  - Name: 
+    Value: 5372704
+  Exists: 1
 --- !u!114 &114331047355105646
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -125,7 +174,7 @@ MonoBehaviour:
   Path: event:/Grab
   guid: 3e37163240a34c48958115494b3b39ee
   Banks:
-  - {fileID: 114969973159479368}
+  - {fileID: 114273189448212804}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -183,6 +232,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Name: Wind
+  Min: 0
+  Max: 1
+  Default: 0
+--- !u!114 &114453034361203982
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: escape
   Min: 0
   Max: 1
   Default: 0
@@ -260,7 +324,7 @@ MonoBehaviour:
   Path: event:/Jumping
   guid: 006d776a5ae99a488c2a8efd58e624f2
   Banks:
-  - {fileID: 114969973159479368}
+  - {fileID: 114273189448212804}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -340,7 +404,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Path: FMOD Banks/Desktop/Master Bank.strings.bank
-  lastModified: 636750720980000000
+  lastModified: 636750790060000000
   LoadResult: 0
   FileSizes:
   - Name: 
@@ -390,12 +454,12 @@ MonoBehaviour:
   Path: event:/Atmos
   guid: 88929844f6fdcd42adce550f7120efaf
   Banks:
-  - {fileID: 114969973159479368}
+  - {fileID: 114273189448212804}
   IsStream: 1
   Is3D: 0
   IsOneShot: 0
   Parameters:
-  - {fileID: 114407734572000498}
+  - {fileID: 114165068096976436}
   MinDistance: 0
   MaxDistance: 0
   Length: 32000
@@ -447,12 +511,12 @@ MonoBehaviour:
   Path: event:/Music
   guid: 43e4c67f22df054589c2339977aad467
   Banks:
-  - {fileID: 114969973159479368}
+  - {fileID: 114273189448212804}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
   Parameters:
-  - {fileID: 114688758746631376}
+  - {fileID: 114453034361203982}
   MinDistance: 0
   MaxDistance: 0
   Length: 0
