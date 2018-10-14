@@ -42,6 +42,8 @@ public class PlayerController : MonoBehaviour {
     Vector2 playerAim;
 
 
+    public bool firstDashHappend;
+
     [Header("FMOD Refs")]
     public StudioEventEmitter jumpCharging;
 
@@ -75,6 +77,8 @@ public class PlayerController : MonoBehaviour {
 
         jumpingForce = jumpingForceMinMax.x;
 
+
+        firstDashHappend = false;
     }
 
     private void FixedUpdate()
@@ -148,6 +152,9 @@ public class PlayerController : MonoBehaviour {
     }
 
     void PlayerCanon(){
+
+        firstDashHappend = true;
+
         // Player is jumping
         JumpButtonReleased = false;
 
