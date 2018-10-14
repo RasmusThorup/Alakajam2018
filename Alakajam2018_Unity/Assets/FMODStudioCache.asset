@@ -13,7 +13,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   EditorBanks:
   - {fileID: 114792710698336882}
-  - {fileID: 114100149144516190}
+  - {fileID: 114977567848021788}
   EditorEvents:
   - {fileID: 114550390122144618}
   - {fileID: 114030323445638616}
@@ -27,9 +27,9 @@ MonoBehaviour:
   - {fileID: 114575988528344088}
   - {fileID: 114711104360943874}
   - {fileID: 114754256096184548}
-  MasterBankRef: {fileID: 114100149144516190}
+  MasterBankRef: {fileID: 114977567848021788}
   StringsBankRef: {fileID: 114792710698336882}
-  stringsBankWriteTime: 636751355760000000
+  stringsBankWriteTime: 636751375400000000
   cacheVersion: 2
 --- !u!114 &114001741016745886
 MonoBehaviour:
@@ -82,12 +82,12 @@ MonoBehaviour:
   Path: event:/VelocityWind
   guid: 85883d080453cf46b4f1e8c75eb434aa
   Banks:
-  - {fileID: 114100149144516190}
+  - {fileID: 114977567848021788}
   IsStream: 0
   Is3D: 0
   IsOneShot: 0
   Parameters:
-  - {fileID: 114935998210119564}
+  - {fileID: 114876922292826640}
   MinDistance: 0
   MaxDistance: 0
   Length: 4710
@@ -120,12 +120,12 @@ MonoBehaviour:
   Path: event:/Charging
   guid: 456fec416de496439e7f71d7bdb7bb06
   Banks:
-  - {fileID: 114100149144516190}
+  - {fileID: 114977567848021788}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
   Parameters:
-  - {fileID: 114283845299575660}
+  - {fileID: 114252362520242430}
   MinDistance: 0
   MaxDistance: 0
   Length: 5300
@@ -162,7 +162,7 @@ MonoBehaviour:
   FileSizes:
   - Name: 
     Value: 8517696
-  Exists: 1
+  Exists: 0
 --- !u!114 &114138402259955140
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -332,6 +332,21 @@ MonoBehaviour:
   Min: 0
   Max: 1
   Default: 0
+--- !u!114 &114252362520242430
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: ChargeUp
+  Min: 0
+  Max: 1
+  Default: 0
 --- !u!114 &114263595102638152
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -376,12 +391,12 @@ MonoBehaviour:
   Path: event:/Music
   guid: 43e4c67f22df054589c2339977aad467
   Banks:
-  - {fileID: 114100149144516190}
+  - {fileID: 114977567848021788}
   IsStream: 1
   Is3D: 0
   IsOneShot: 0
   Parameters:
-  - {fileID: 114271905215621220}
+  - {fileID: 114605328678435418}
   MinDistance: 0
   MaxDistance: 0
   Length: 208089
@@ -474,7 +489,7 @@ MonoBehaviour:
   Path: event:/UI Background
   guid: e00a63b8b3a6294a85f69c90bc21db45
   Banks:
-  - {fileID: 114100149144516190}
+  - {fileID: 114977567848021788}
   IsStream: 1
   Is3D: 0
   IsOneShot: 0
@@ -545,7 +560,7 @@ MonoBehaviour:
   Path: event:/UI Click
   guid: 451bc3f3e091ce48a3536a5f2f58612a
   Banks:
-  - {fileID: 114100149144516190}
+  - {fileID: 114977567848021788}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -587,6 +602,21 @@ MonoBehaviour:
   - Name: 
     Value: 8515904
   Exists: 1
+--- !u!114 &114438505715312880
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: Wind
+  Min: 0
+  Max: 1
+  Default: 0
 --- !u!114 &114469977526849660
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -661,7 +691,7 @@ MonoBehaviour:
   Path: event:/Jumping
   guid: 006d776a5ae99a488c2a8efd58e624f2
   Banks:
-  - {fileID: 114100149144516190}
+  - {fileID: 114977567848021788}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -698,7 +728,7 @@ MonoBehaviour:
   Path: event:/Death
   guid: 9fbe3609014a3b44928ad3e65e32f544
   Banks:
-  - {fileID: 114100149144516190}
+  - {fileID: 114977567848021788}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -707,6 +737,21 @@ MonoBehaviour:
   MaxDistance: 0
   Length: 4000
 --- !u!114 &114577418496410286
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: escape
+  Min: 0
+  Max: 1
+  Default: 0
+--- !u!114 &114605328678435418
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -750,7 +795,7 @@ MonoBehaviour:
   Path: event:/Grab
   guid: 3e37163240a34c48958115494b3b39ee
   Banks:
-  - {fileID: 114100149144516190}
+  - {fileID: 114977567848021788}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -869,7 +914,7 @@ MonoBehaviour:
   Path: snapshot:/Slowtime
   guid: 4b0fefeab3d4a14fbb43d10749062fb2
   Banks:
-  - {fileID: 114100149144516190}
+  - {fileID: 114977567848021788}
   IsStream: 0
   Is3D: 0
   IsOneShot: 0
@@ -921,7 +966,7 @@ MonoBehaviour:
   Path: snapshot:/Menu
   guid: 878951d12a72454c8a8fcd48eb7d6afe
   Banks:
-  - {fileID: 114100149144516190}
+  - {fileID: 114977567848021788}
   IsStream: 0
   Is3D: 0
   IsOneShot: 0
@@ -943,7 +988,7 @@ MonoBehaviour:
   Path: snapshot:/PauseMenu
   guid: 63a2e0f8fcf8164f8f5964ee479da72d
   Banks:
-  - {fileID: 114100149144516190}
+  - {fileID: 114977567848021788}
   IsStream: 0
   Is3D: 0
   IsOneShot: 0
@@ -963,7 +1008,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Path: FMOD Banks/Desktop/Master Bank.strings.bank
-  lastModified: 636751355760000000
+  lastModified: 636751375400000000
   LoadResult: 0
   FileSizes:
   - Name: 
@@ -1043,12 +1088,12 @@ MonoBehaviour:
   Path: event:/Atmos
   guid: 88929844f6fdcd42adce550f7120efaf
   Banks:
-  - {fileID: 114100149144516190}
+  - {fileID: 114977567848021788}
   IsStream: 1
   Is3D: 0
   IsOneShot: 0
   Parameters:
-  - {fileID: 114221621360878570}
+  - {fileID: 114438505715312880}
   MinDistance: 0
   MaxDistance: 0
   Length: 32000
@@ -1064,6 +1109,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Name: Wind
+  Min: 0
+  Max: 1
+  Default: 0
+--- !u!114 &114876922292826640
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: Velocity
   Min: 0
   Max: 1
   Default: 0
@@ -1210,3 +1270,22 @@ MonoBehaviour:
   Min: 0
   Max: 1
   Default: 0
+--- !u!114 &114977567848021788
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: /Users/RasmusThorup/Documents/GitHub/Alakajam2018/Alakajam2018_Unity/FMOD
+    Banks/Desktop/Master Bank.bank
+  lastModified: 636751375400000000
+  LoadResult: 0
+  FileSizes:
+  - Name: 
+    Value: 8517696
+  Exists: 1
