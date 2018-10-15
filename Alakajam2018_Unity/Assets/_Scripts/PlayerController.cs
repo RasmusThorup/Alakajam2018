@@ -109,10 +109,9 @@ public class PlayerController : MonoBehaviour {
             JumpButtonReleased = true;
         }
 
-        if (!canAim)
+        if (GameManager.currentLeafHashCode == 0)
         {
             AirControl();
-
         }
 
         //Handle in air Dashes
@@ -221,6 +220,12 @@ public class PlayerController : MonoBehaviour {
     }
 
     public void PlayerGravity(){
+
+        if (GameManager.currentLeafHashCode == 0 && gravityAmount <= 0)
+        {
+            gravityAmount = initGravityAmount;
+        }
+
         playerRigidbody.AddForce(Vector3.down * gravityAmount, ForceMode.Acceleration);
     }
 

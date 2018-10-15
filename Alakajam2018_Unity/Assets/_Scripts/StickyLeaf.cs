@@ -101,6 +101,7 @@ public class StickyLeaf : MonoBehaviour {
 
             other.transform.parent = null;
 
+            //playerRigid.position = new Vector3(other.transform.position.x, other.transform.position.y, 0);
             other.transform.position = new Vector3(other.transform.position.x, other.transform.position.y, 0);
 
             leafCollider.enabled = true;

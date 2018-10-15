@@ -15,8 +15,6 @@ public class GameManager : MonoBehaviour {
 
     public StudioEventEmitter deadSound;
 
-   
-
     [SerializeField]
     public float score;
     [SerializeField]
@@ -24,7 +22,14 @@ public class GameManager : MonoBehaviour {
 
     public static int currentLeafHashCode;
 
+    public float leafHash;
+
     public bool gameOver;
+
+    private void Update()
+    {
+        leafHash = currentLeafHashCode;
+    }
 
     private void Awake()
     {
@@ -38,6 +43,8 @@ public class GameManager : MonoBehaviour {
             Destroy(gameObject);
 
         gameOver = false;
+        currentLeafHashCode = 0;
+
     }
 
     void Start()
