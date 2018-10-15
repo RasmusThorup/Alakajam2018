@@ -736,6 +736,11 @@ Prefab:
       propertyPath: InitialModule.startLifetime.scalar
       value: 30
       objectReference: {fileID: 0}
+    - target: {fileID: 198532218629071348, guid: cca5cfb30edcc45d7bd6d3b967075ba4,
+        type: 2}
+      propertyPath: InitialModule.maxNumParticles
+      value: 1000
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cca5cfb30edcc45d7bd6d3b967075ba4, type: 2}
   m_IsPrefabAsset: 0
