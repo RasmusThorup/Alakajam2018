@@ -8197,7 +8197,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4739176479580166, guid: cf4991901821044e89b12c36527728e0, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 9.619951
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 4739176479580166, guid: cf4991901821044e89b12c36527728e0, type: 2}
       propertyPath: m_LocalPosition.z
@@ -8237,6 +8237,26 @@ Prefab:
         type: 2}
       propertyPath: m_CameraDistance
       value: 35.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114183362716185542, guid: cf4991901821044e89b12c36527728e0,
+        type: 2}
+      propertyPath: lockYPos
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114183362716185542, guid: cf4991901821044e89b12c36527728e0,
+        type: 2}
+      propertyPath: currentYPos
+      value: 4.390752
+      objectReference: {fileID: 0}
+    - target: {fileID: 114525515474692646, guid: cf4991901821044e89b12c36527728e0,
+        type: 2}
+      propertyPath: m_ScreenY
+      value: 0.469
+      objectReference: {fileID: 0}
+    - target: {fileID: 114183362716185542, guid: cf4991901821044e89b12c36527728e0,
+        type: 2}
+      propertyPath: lastYPos
+      value: 12
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cf4991901821044e89b12c36527728e0, type: 2}
