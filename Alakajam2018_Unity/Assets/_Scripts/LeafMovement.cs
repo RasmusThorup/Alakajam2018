@@ -32,7 +32,7 @@ public class LeafMovement : MonoBehaviour {
 
         transform.position += Vector3.down * fallingSpeed * Time.deltaTime;
 
-        floatVisual.position = new Vector3 ((leafXPosition*distanceAmount)+ xOffset, floatVisual.position.y, floatVisual.position.z);
+        floatVisual.position = new Vector3 ((leafXPosition*distanceAmount)+ xOffset, floatVisual.position.y, 0);
     }
 
 

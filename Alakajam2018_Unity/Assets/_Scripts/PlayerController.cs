@@ -112,6 +112,7 @@ public class PlayerController : MonoBehaviour {
         if (!canAim)
         {
             AirControl();
+
         }
 
         //Handle in air Dashes
