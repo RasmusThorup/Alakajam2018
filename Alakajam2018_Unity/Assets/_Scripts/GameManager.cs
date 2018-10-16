@@ -69,11 +69,15 @@ public class GameManager : MonoBehaviour {
             deadSound.Play(); 
 
         }
+
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
     }
 
     void LockMouse()
     {
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
+       
     }
 }

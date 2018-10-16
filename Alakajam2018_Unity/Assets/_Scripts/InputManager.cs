@@ -13,6 +13,7 @@ public class InputManager : MonoBehaviour {
 
     void Update()
     {
+
         if (GameManager.instance.gameOver)
             return;
 
@@ -32,5 +33,6 @@ public class InputManager : MonoBehaviour {
         {
             jumpReleased = true;
         }
+
     }
 }

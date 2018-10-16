@@ -13,7 +13,9 @@ public class MenuManager : MonoBehaviour {
     void Start () 
     {
         sceneFader = GetComponent<SceneFader>();
-	}
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
+    }
 
     private void Update()
     {
@@ -35,6 +37,5 @@ public class MenuManager : MonoBehaviour {
     {
         highestscore.text = GameManager.highScore.ToString("F0");
     }
-
     
 }
