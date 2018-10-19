@@ -8197,7 +8197,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4739176479580166, guid: cf4991901821044e89b12c36527728e0, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 12
+      value: 16.63206
       objectReference: {fileID: 0}
     - target: {fileID: 4739176479580166, guid: cf4991901821044e89b12c36527728e0, type: 2}
       propertyPath: m_LocalPosition.z
@@ -13719,7 +13719,7 @@ MonoBehaviour:
   jumpingForceMinMax: {x: 10, y: 20}
   gravityAmount: 9.81
   timeSlowdown: 0.152
-  numberOfDashes: 0
+  numberOfDashes: 10
   airControlSpeed: 5
   canAim: 0
   canonAimSlider: {fileID: 2076017969}
@@ -13774,6 +13774,7 @@ MonoBehaviour:
   deadzone: 0.7
   isJumping: 0
   jumpReleased: 0
+  keyboardAimRate: 15
 --- !u!136 &1663647636
 CapsuleCollider:
   m_ObjectHideFlags: 0
