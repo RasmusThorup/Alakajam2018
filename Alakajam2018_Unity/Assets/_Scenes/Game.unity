@@ -2208,6 +2208,7 @@ GameObject:
   m_Component:
   - component: {fileID: 217174184}
   - component: {fileID: 217174185}
+  - component: {fileID: 217174186}
   m_Layer: 0
   m_Name: Wind
   m_TagString: Untagged
@@ -2250,6 +2251,21 @@ MonoBehaviour:
   OverrideAttenuation: 0
   OverrideMinDistance: 0
   OverrideMaxDistance: 0
+--- !u!114 &217174186
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 217174183}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 76aa3d23402544e17bc71ee2d2e53373, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  windSound: {fileID: 217174185}
+  player: {fileID: 2001582190}
+  height: 0
+  maxHeight: 500
 --- !u!1 &223302590
 GameObject:
   m_ObjectHideFlags: 0
@@ -8197,7 +8213,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4739176479580166, guid: cf4991901821044e89b12c36527728e0, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 16.63206
+      value: 85.28427
       objectReference: {fileID: 0}
     - target: {fileID: 4739176479580166, guid: cf4991901821044e89b12c36527728e0, type: 2}
       propertyPath: m_LocalPosition.z
@@ -22498,7 +22514,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &2050227080
 MonoBehaviour:
   m_ObjectHideFlags: 0
