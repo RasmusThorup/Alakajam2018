@@ -2241,7 +2241,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Event: event:/Atmos
-  PlayEvent: 1
+  PlayEvent: 11
   StopEvent: 12
   CollisionTag: 
   AllowFadeout: 1
@@ -2263,9 +2263,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   windSound: {fileID: 217174185}
-  player: {fileID: 2001582190}
   height: 0
-  maxHeight: 500
+  maxHeight: 300
 --- !u!1 &223302590
 GameObject:
   m_ObjectHideFlags: 0
@@ -8213,7 +8212,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4739176479580166, guid: cf4991901821044e89b12c36527728e0, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 85.28427
+      value: 400.804
       objectReference: {fileID: 0}
     - target: {fileID: 4739176479580166, guid: cf4991901821044e89b12c36527728e0, type: 2}
       propertyPath: m_LocalPosition.z
@@ -13735,7 +13734,7 @@ MonoBehaviour:
   jumpingForceMinMax: {x: 10, y: 20}
   gravityAmount: 9.81
   timeSlowdown: 0.152
-  numberOfDashes: 10
+  numberOfDashes: 0
   airControlSpeed: 5
   canAim: 0
   canonAimSlider: {fileID: 2076017969}
@@ -22514,7 +22513,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &2050227080
 MonoBehaviour:
   m_ObjectHideFlags: 0

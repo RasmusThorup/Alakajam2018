@@ -6,7 +6,7 @@ using FMODUnity;
 public class WindParameter : MonoBehaviour {
 
     public StudioEventEmitter windSound;
-    public Transform player;
+    Transform player;
 
     public float height;
     public float maxHeight = 500f; 
@@ -16,17 +16,20 @@ public class WindParameter : MonoBehaviour {
     {
         windSound.SetParameter("Wind", 0f);
 
-        height = player.transform.position.y; 
+        GameObject playerGO = GameObject.FindWithTag("Player");
+
+        player = playerGO.transform;
+        height = player.position.y; 
 
     }
 
     private void Update()
     {
      
-        height = player.transform.position.y;
+        height = player.position.y;
         float scaledHeight = height / maxHeight;
 
-        windSound.SetParameter("Wind", scaledHeight); 
+        windSound.SetParameter("Wind", scaledHeight);
 
  
 
